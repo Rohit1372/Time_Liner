@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.QRScannerActivity"
+        android:id="@+id/relative">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/qr_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="8dp"
+            android:background="@color/white"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/qr_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/google_sans_bold"
+                android:text="QR Scanner"
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/qr_toolbar"
+            android:layout_marginTop="5dp"
+            android:layout_above="@id/bottomNavBar2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/qr_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    app:lottie_rawRes="@raw/qr_scan"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    />
+
+                <ScrollView
+                    android:id="@+id/qrscan_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/text_view_bg"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/qrScan_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="10dp"
+                        android:text="Your result will appear here...."
+                        android:textSize="20sp" />
+
+                </ScrollView>
+
+                <LinearLayout
+                    android:id="@+id/btn_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/bottomNavBar2"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp">
+
+                    <Button
+                        android:id="@+id/qrscan_btn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/black"
+                        android:text="Scan" />
+
+                    <Button
+                        android:id="@+id/qr_copy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/black"
+                        android:text="copy"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bottom_bar_shape"
+            android:padding="4dp"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:itemTextAppearanceActive="@dimen/bottom_nav_active_text_size"
+            app:itemTextAppearanceInactive="@dimen/bottom_nav_text_size"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_bar" />
+
+    </RelativeLayout>
+</layout>

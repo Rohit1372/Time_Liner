@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "199667077828",
+    "project_id": "textrecognization-33b63",
+    "storage_bucket": "textrecognization-33b63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199667077828:android:77b2efb52d7af775de6f91",
+        "android_client_info": {
+          "package_name": "com.example.timeliner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199667077828-e9g28bdoun97o7i021nbhe12p80202a8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.timeliner",
+            "certificate_hash": "7ffe011024cee271b9e50e3abb871b7e09a68a5b"
+          }
+        },
+        {
+          "client_id": "199667077828-geqgbib82j0kko73g9bedihfjns7utnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNr6klBTT3EJQPH2Rrw1I0MXb-72lkvLA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199667077828-geqgbib82j0kko73g9bedihfjns7utnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

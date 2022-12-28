@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/myNotes"
+        android:icon="@drawable/ic_notes"
+        android:title="My Notes"/>
+
+    <item
+        android:id="@+id/qr_scanner"
+        android:icon="@drawable/ic_qrscanner"
+        android:title="QR Scanner"/>
+
+    <item
+        android:id="@+id/text_recognization"
+        android:icon="@drawable/ic_ocr"
+        android:title="OCR"/>
+
+</menu>

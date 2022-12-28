@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bottomSheetParent">
+
+        <RelativeLayout
+            android:id="@+id/bottomSheetContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/bar"
+                android:layout_width="40dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/shape_image" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/addColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bar"
+                android:drawableStart="@drawable/ic_baseline_color_lens_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/google_sans_regular"
+                android:text="@string/choose_color"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addColor"
+                android:scrollbars="none">
+
+                <com.thebluealliance.spectrum.SpectrumPalette
+                    android:id="@+id/colorPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:spectrum_autoPadding="true"
+                    app:spectrum_colors="@array/color_picker"
+                    app:spectrum_columnCount="16"
+                    app:spectrum_outlineWidth="0.1dp" />
+
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
